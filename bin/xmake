@@ -1,0 +1,38 @@
+#!/bin/sh
+
+###################################################
+#
+# xmake, (c) 2013 SAP AG
+#
+###################################################
+
+_SN=`basename "$0"` # script name
+
+if [ `echo $0 | cut -c1` = "/" ]; then
+	XMAKE_HOME=$0
+else
+	XMAKE_HOME=`pwd`/$0
+fi
+
+XMAKE_HOME=`python -c "import os;print( os.path.realpath('$XMAKE_HOME'))"`
+
+# Get absolute parent two dirs above
+ABS()
+{
+  ( cd `dirname "$0"`; pwd)
+}
+XMAKE_HOME=`ABS $XMAKE_HOME`
+XMAKE_HOME=`dirname $XMAKE_HOME`
+echo "XMAKE_HOME=$XMAKE_HOME"
+
+###################################################
+# determine if this xmake was installed, or fetched 
+# from GIT  --> different tool structure
+# the file buildversion.txt is generated at build time  
+# and packed into installer
+###################################################
+
+
+XMAKEPY_SCRIPT=$XMAKE_HOME/xmake/bootstrap.py
+
+python $XMAKEPY_SCRIPT "$@"
