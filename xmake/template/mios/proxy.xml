@@ -1,0 +1,8 @@
+    <proxies>
+        <proxy>
+            <active>true</active>
+            <host>proxy</host>
+            <port>8080</port>
+            <nonProxyHosts>*.wdf.sap.corp|nexus</nonProxyHosts>
+        </proxy>
+    </proxies>

@@ -1,0 +1,13 @@
+{
+  "name": "npm-dependency-check",
+  "version": "1.0.0-ms-3",
+  "scripts": {
+    "start": "node check"
+  },
+  "dependencies": {
+    "read-package-json": "~1.3.1",
+    "npm-package-arg": "~3.1.0",
+    "commander": "~2.6.0",
+    "validator": "~3.30.0"
+  }
+}

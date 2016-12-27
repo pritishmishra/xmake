@@ -1,0 +1,4 @@
+#!/bin/bash
+if echo $@ | grep -qw "\--version"; then
+	echo "CURRENT NPM VERSION IS 1.0.0";
+fi

@@ -1,0 +1,32 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <interactiveMode>false</interactiveMode>
+    <usePluginRegistry>false</usePluginRegistry>
+    <offline>false</offline>
+    <proxies>
+        <proxy>
+            <active>true</active>
+            <host>proxy</host>
+            <port>8080</port>
+            <nonProxyHosts>*.wdf.sap.corp|nexus</nonProxyHosts>
+        </proxy>
+    </proxies>
+    <mirrors></mirrors>
+    <profiles>
+        <profile>
+            <id>customized.repo</id>
+            <pluginRepositories></pluginRepositories>
+            <repositories></repositories>
+            <properties>
+                <tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
+                <tycho.localArtifacts>ignore</tycho.localArtifacts>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>customized.repo</activeProfile>
+    </activeProfiles>
+</settings>

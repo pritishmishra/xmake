@@ -1,0 +1,30 @@
+Version 0.9.2
+- dockernode build plugin supports docker image based node builds
+- prototype for xmake module build
+
+Version 0.9
+- on-the-fly installation cache for required tools
+- tool dependencies
+- build for xmake component
+- required tools (ai, ad, prodpass) as part of installation
+- requesting dedicated xmake version for a content snapshot
+- handling of using snapshot versions for xmake
+- support of version wildcard to select latest released sub version
+- logging
+- forwarding support for build results
+- visual studio tool plugin
+- plugin dependencies
+- multiple repo type support
+- content plugin support
+- node build plugin
+- dot files in component root folder as alternative to cfg folder
+- add tool bindings for node build plugin
+- first version of plugin for build docker images
+- extended bootstrapper protocol to handle incompatibilities
+- bootstrapper update based on three-level bootstrapping
+- maven build plugin
+- node build now generated shrinkwrap information
+- variant support for docker image based builds
+- imported build plugins to build docker images and to build with docker images
+
+

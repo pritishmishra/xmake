@@ -1,0 +1,33 @@
+env:    
+    mocha: true
+    node: true
+
+globals:    
+    expect: true
+    inject: true
+    spyOn: true
+    xit: true
+rules:
+    camelcase: 0
+    dot-notation: 1
+    eol-last: 1
+    handle-callback-err: 1
+    new-cap: 0
+    no-extra-semi: 1
+    no-path-concat: 0
+    no-process-exit: 1
+    no-shadow: 1
+    no-space-before-semi: 1
+    no-trailing-spaces: 1
+    no-undef: 1
+    no-underscore-dangle: 0
+    no-unused-expressions: 1
+    no-unused-vars: 0
+    no-use-before-define: [1, nofunc]
+    quotes: [2, single]
+    semi: 2
+    space-infix-ops: 1
+    strict: 0
+    valid-typeof: 1
+    no-process-exit: 0
+    no-loop-func: 0

@@ -1,0 +1,26 @@
+#
+#Tue Oct 20 15:34:53 UTC 2015
+/validator=3.30.0
+/commander=2.6.0
+/npm-package-arg=3.1.1
+/npm-package-arg/hosted-git-info=1.6.0
+/npm-package-arg/semver=4.3.6
+/read-package-json=1.3.3
+/read-package-json/normalize-package-data=1.0.3
+/read-package-json/normalize-package-data/github-url-from-git=1.4.0
+/read-package-json/normalize-package-data/semver=4.3.6
+/read-package-json/normalize-package-data/github-url-from-username-repo=1.0.2
+/read-package-json/graceful-fs=3.0.8
+/read-package-json/glob=5.0.15
+/read-package-json/glob/minimatch=3.0.0
+/read-package-json/glob/minimatch/brace-expansion=1.1.1
+/read-package-json/glob/minimatch/brace-expansion/balanced-match=0.2.0
+/read-package-json/glob/minimatch/brace-expansion/concat-map=0.0.1
+/read-package-json/glob/path-is-absolute=1.0.0
+/read-package-json/glob/inflight=1.0.4
+/read-package-json/glob/inflight/wrappy=1.0.1
+/read-package-json/glob/once=1.3.2
+/read-package-json/glob/once/wrappy=1.0.1
+/read-package-json/glob/inherits=2.0.1
+/read-package-json/json-parse-helpfulerror=1.0.3
+/read-package-json/json-parse-helpfulerror/jju=1.2.1
