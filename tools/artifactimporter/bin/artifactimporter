@@ -1,0 +1,53 @@
+#!/bin/sh
+
+#############################################################################
+#
+# Artifact Importer, (c) 2015 SAP AG
+#
+#############################################################################
+
+_SN=`basename "$0"` # script name
+
+reject_unsupported_environment() {
+    case "`uname`" in
+        CYGWIN*)
+            echo "Cygwin is not supported" 1>&2
+            exit 1
+    esac
+}
+
+determine_dir() {
+	if [ -z "$ARTIFACTIMPORTER_HOME" ]; then
+		if [ `echo $0 | cut -c1` = "/" ]; then
+			ARTIFACTIMPORTER_HOME=$0
+		else
+		    ARTIFACTIMPORTER_HOME=`pwd`/$0
+		fi
+		ARTIFACTIMPORTER_HOME=`dirname $ARTIFACTIMPORTER_HOME`/..
+	fi
+}
+
+check_env() {
+    if [ -z "$ARTIFACTIMPORTER_HOME" ]; then
+        echo "$_SN: error: ARTIFACTIMPORTER_HOME must be set to the directory containing the artifact importer tool" 1>&2
+        exit 1
+    fi
+    if [ ! -d "$ARTIFACTIMPORTER_HOME" ]; then
+        echo "$_SN: error: ARTIFACTIMPORTER_HOME does not denote a directory: $ARTIFACTIMPORTER_HOME" 1>&2
+        exit 1
+    fi
+}
+
+java_executable() {
+    if [ -n "$JAVA_HOME" ]; then
+        echo "${JAVA_HOME}/bin/java"
+    else
+        echo "java"
+    fi
+}
+
+reject_unsupported_environment
+determine_dir
+check_env
+
+"`java_executable`" $ARTIFACTIMPORTER_OPTS -cp "$ARTIFACTIMPORTER_HOME/lib/*:" com.sap.prd.commonrepo.artifactimporter.commands.ArtifactImporterCommand "$@"
